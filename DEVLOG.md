@@ -58,7 +58,7 @@ Built jar deployed to `fabric 26.1/mods/` on the Gameoverse project as
 `cluttered-3.0.3-26.1.x-0.2.3-fabric-unofficial.jar` (same filename as
 upstream — only the fix differs, not the version).
 
-**Not yet upstreamed** — this fix hasn't been offered back to
-`BoyAxl/Cluttered-Fabric-Port` as a PR. Worth doing since it's a genuine,
-narrow, verified bug fix that would help anyone else using this port on
-a similarly-versioned server.
+**Upstreamed**: opened as a clean, fix-only PR (no Gameoverse-specific
+DEVLOG content) at https://github.com/BoyAxl/Cluttered-Fabric-Port/pull/3,
+from a fork at https://github.com/WasabiIceCream/Cluttered-Fabric-Port,
+branch `fix/jukebox-facing-duplicate-property` off `port/fabric-26.1.x`.
