@@ -67,7 +67,12 @@ public class CustomJukeboxBlock extends JukeboxBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
+        // Vanilla JukeboxBlock in this Minecraft version already registers
+        // FACING itself (it's now directional). This override used to add it
+        // again, which throws "duplicate property: facing" at block-state
+        // init and crashes the game on startup. FACING is still available
+        // to subclasses like TraditionalRadioBlock via the inherited
+        // definition -- it just doesn't need to be added a second time here.
         super.createBlockStateDefinition(pBuilder);
-        pBuilder.add(FACING);
     }
 }
